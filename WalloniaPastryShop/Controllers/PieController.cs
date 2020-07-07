@@ -21,6 +21,7 @@ namespace WalloniaPastryShop.Controllers
 
         public ViewResult List()
         {
+            ViewBag.CurrentCategory = "Cheese cakes";
             return View(pieRepository.AllPies);
         }
     }

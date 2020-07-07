@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WalloniaPastryShop.Models;
 using WalloniaPastryShop.Repository;
+using WalloniaPastryShop.ViewModels;
 
 namespace WalloniaPastryShop.Controllers
 {
@@ -21,8 +22,11 @@ namespace WalloniaPastryShop.Controllers
 
         public ViewResult List()
         {
-            ViewBag.CurrentCategory = "Cheese cakes";
-            return View(pieRepository.AllPies);
+            PiesListViewModel piesListViewModel = new PiesListViewModel();
+            piesListViewModel.Pies = pieRepository.AllPies;
+            piesListViewModel.CurrentCategory = "Cheese cakes";
+
+            return View(piesListViewModel);
         }
     }
 }

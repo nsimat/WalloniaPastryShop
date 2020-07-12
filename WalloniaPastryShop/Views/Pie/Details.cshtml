@@ -6,14 +6,14 @@
 
 <h2>@Model.Name</h2>
 
-<div class="img-thumbnail">
-    <img src="@Model.ImageUrl" alt="@Model.Name" />
-    <div class="caption-full">
-        <h3 class="float-right">@Model.Price</h3>
+<div class="card">
+    <img class="card-img-top" src="@Model.ImageUrl" alt="@Model.Name" />
+    <div class="card-body">
+        <h3 class="float-right">@Model.Price.ToString("c")</h3>
         <h3>
-            <a href="">@Model.Name</a>
+            <a class="card-link" href="">@Model.Name</a>
         </h3>
         <h4>@Model.ShortDescription</h4>
-        <p>@Model.LongDescription</p>
+        <p class="card-text">@Model.LongDescription</p>
     </div>
 </div>

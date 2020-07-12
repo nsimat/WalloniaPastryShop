@@ -3,18 +3,9 @@
 
 <h1>@Model.CurrentCategory</h1>
 
-@foreach (var pie in Model.Pies)
-{
-    <div class="col-sm-4 col-lg-4 col-md-4">
-        <div class="img-thumbnail">
-            <img src="@pie.ImageThumbnailUrl" alt="" />
-            <div class="py-2">
-                <h3 class="float-right">@pie.Price.ToString("C")</h3>
-                <h3>
-                    <a>@pie.Name</a>
-                </h3>
-                <p>@pie.ShortDescription</p>
-            </div>
-        </div>
-    </div>
-}
+<div class="card-deck">
+    @foreach (var pie in Model.Pies)
+    {
+        <partial name="_PieCard" model="pie"/>
+    }
+</div>

@@ -2,24 +2,44 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <title>@ViewBag.Title - Wallonia Pastry Shop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap-lumen.css" />
     <link rel="stylesheet" href="~/content/site.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-primary navbar-fixed-top bg-dark" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    @*<li><a asp-controller="Home" asp-action="Index">Home</a></li>*@
+                    <li><a asp-controller="Pie" asp-action="List">Pies</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 float-md-left">
                 <p class="lead">
                     <img class="img-fluid" src="~/images/bethanylogo.png" alt="Wallonia Pastry Shop" />
                 </p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 float-md-left">
                 @RenderBody()
             </div>
-        </div>        
+        </div>
     </div>
 
     <script src="~/lib/jquery/jquery.js"></script>

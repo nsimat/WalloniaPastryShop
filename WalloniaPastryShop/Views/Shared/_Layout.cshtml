@@ -2,29 +2,36 @@
 
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
     <title>@ViewBag.Title - Wallonia Pastry Shop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap-lumen.css" />
     <link rel="stylesheet" href="~/content/site.css" />
     <link rel="stylesheet" href="~/lib/font-awesome/css/all.css" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-primary navbar-fixed-top bg-dark mb-3" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top bg-dark mb-3" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-controller="Pie" asp-action="List">Pies</a></li>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index">WalloniaPastryShop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                    data-target="#navbarWalloniaPastryShop" aria-controls="navbarWalloniaPastryShop" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarWalloniaPastryShop">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active mx-3">
+                        <a asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a asp-controller="Pie" asp-action="List">Pies</a>
+                    </li>
                 </ul>
+                @*<ul class="navbar-nav my-2 my-lg-0">
+                    <li></li>
+                    <li></li>
+                </ul>*@
             </div>
         </div>
     </nav>

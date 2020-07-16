@@ -2,7 +2,7 @@
 @model ShoppingCartViewModel
 
     <h2>Your shopping cart</h2> 
-    <h4>Here are the delicious pies in your shopping cart</h4>
+    <h4>Here are the delicious pies in your shopping cart.</h4>
 
     <table class="table table-bordered table-striped">
         <thead>
@@ -26,5 +26,12 @@
             </tr>
             }
         </tbody>
-        <tfoot></tfoot>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Total:</td>
+                <td class="text-right">
+                    @Model.ShoppingCartTotal.ToString("c")
+                </td>
+            </tr>
+        </tfoot>
     </table>

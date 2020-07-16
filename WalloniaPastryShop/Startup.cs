@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WalloniaPastryShop.Models;
 using WalloniaPastryShop.Repository;
+using WalloniaPastryShop.Services;
 
 namespace WalloniaPastryShop
 {
@@ -34,6 +35,11 @@ namespace WalloniaPastryShop
 
             services.AddScoped<IPieRepository, PieRepository>();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ShoppingCart>(sp => ShoppingCart.GetCart(sp));
+
+            services.AddHttpContextAccessor();
+            services.AddSession();
+
             services.AddControllersWithViews();
         }
 
@@ -47,6 +53,7 @@ namespace WalloniaPastryShop
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 

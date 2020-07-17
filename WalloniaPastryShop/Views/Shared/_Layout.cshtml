@@ -27,6 +27,9 @@
                     <li class="nav-item mx-3">
                         <a asp-controller="Pie" asp-action="List">Pies</a>
                     </li>
+                    <li class="nav-item mx-3">
+                        @await Component.InvokeAsync("ShoppingCartSummary")
+                    </li>
                 </ul>
                 @*<ul class="navbar-nav my-2 my-lg-0">
                     <li></li>

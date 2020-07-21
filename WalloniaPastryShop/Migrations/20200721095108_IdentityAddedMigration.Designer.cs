@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WalloniaPastryShop.Models;
 
 namespace WalloniaPastryShop.Migrations
 {
     [DbContext(typeof(WalloniaPastryShopDbContext))]
-    partial class WalloniaPastryShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200721095108_IdentityAddedMigration")]
+    partial class IdentityAddedMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

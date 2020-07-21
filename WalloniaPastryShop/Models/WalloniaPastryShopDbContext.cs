@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace WalloniaPastryShop.Models
 {
-    public class WalloniaPastryShopDbContext: DbContext
+    public class WalloniaPastryShopDbContext: IdentityDbContext<IdentityUser>
     {
         public WalloniaPastryShopDbContext(DbContextOptions<WalloniaPastryShopDbContext> options): base(options)
         {

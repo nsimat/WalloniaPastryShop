@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WalloniaPastryShop.Models;
 using WalloniaPastryShop.Repository;
@@ -9,6 +10,7 @@ using WalloniaPastryShop.Services;
 
 namespace WalloniaPastryShop.Controllers
 {
+    [Authorize]
     public class OrderController : Controller
     {
         private readonly IOrderRepository _orderRepository;

@@ -228,9 +228,8 @@ th {
 }
 
 label {
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 0.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
 }
 
 button {
